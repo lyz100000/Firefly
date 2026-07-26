@@ -75,7 +75,7 @@ export const fontsList: FontDefinition[] = [
 		options: {
 			variants: [
 				{
-					src: ["./public/assets/fonts/GreatVibes-Regular-2.otf"],
+					src: ["https://hyscz.474029.xyz/LXGWWenKai-Medium.subset.woff2"],
 				},
 			],
 		},
