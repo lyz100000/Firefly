@@ -120,6 +120,13 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			},
 		},
 		{
+			// 组件类型：时间和问候语组件
+			type: "timeGreeting",
+			enable: true,
+			position: "top",        // top | sticky
+			showOnPostPage: true,   // 是否在文章详情页显示
+		},
+		{
 			// 组件类型：站点统计组件
 			type: "stats",
 			// 是否启用该组件
