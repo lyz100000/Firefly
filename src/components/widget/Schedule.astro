@@ -1,0 +1,18 @@
+---
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
+import { calendarConfig } from "@/config";
+
+
+const now = new Date();
+const years = [now.getFullYear(), now.getFullYear() + 1];
+
+---
+
+<WidgetLayout id="schedule-widget" ...>
+  <div
+    class="schedule-container"
+
+  >
+    <!-- 进度条 + 最近节日倒计时 -->
+  </div>
+</WidgetLayout>

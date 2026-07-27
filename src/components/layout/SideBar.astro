@@ -2,6 +2,8 @@
 import type { MarkdownHeading } from "astro";
 import Advertisement from "@/components/widget/Advertisement.astro";
 import Announcement from "@/components/widget/Announcement.astro";
+import Schedule from "@/components/widget/Schedule.astro";
+
 import Calendar from "@/components/widget/Calendar.astro";
 import Categories from "@/components/widget/Categories.astro";
 import Dynamic from "@/components/widget/Dynamic.astro";
@@ -53,7 +55,9 @@ const componentMap = {
 	music: Music,
 	siteInfo: SiteInfo,
 	dynamic: Dynamic,
-};
+	schedule: Schedule,
+} satisfies Record<WidgetComponentType, typeof Profile>;
+
 
 // 获取侧边栏位置
 const side = (Astro.props.side ||
