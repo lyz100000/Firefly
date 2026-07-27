@@ -1,20 +1,77 @@
-<div style="text-align: center; font-size: 12px;">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页脚备案信息</title>
+    <style>
+        /* 页脚样式 - 极简，无框架 */
+        .footer {
+            text-align: center;
+            font-size: 15px;
+            padding: 0.8rem 1rem;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #0d6efd;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer img {
+            display: inline-block;
+            height: auto;
+            max-height: 35px;
+            width: auto;
+            vertical-align: middle;
+        }
+        .footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4rem 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .footer .row-inline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6rem 1.2rem;
+        }
+        .footer .inline-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 页脚内容 - 无背景、无边框、无圆角、无阴影 -->
+    <footer class="footer">
+        <!-- 三个备案号同一行 -->
+        <div class="row">
+            <a href="https://icp.gov.moe/?keyword=20228865">萌ICP备20228865号</a>
+            <a href="https://www.moicp.cn/keyword.php?type=魔ICP备2026944312号-1" target="_blank">魔ICP备2026944312号-1</a>
+            <a href="https://icp.redcha.cn/beian/ICP-2026010288.html" title="茶ICP备2026010288号" target="_blank">茶ICP备2026010288号</a>
+        </div>
 
-<a href="https://icp.gov.moe/?keyword=20228865">萌ICP备20228865号</a>
-
-<!-- 魔ICP备案代码 开始 -->
-<a href="https://www.moicp.cn/keyword.php?type=魔ICP备2026944312号-1" target="_blank">魔ICP备2026944312号-1</a>
-<!-- 魔ICP备案代码 结束 -->
-<br>
-
-<a href="https://icp.redcha.cn/beian/ICP-2026010288.html" title="茶ICP备2026010288号" target="_blank">茶ICP备2026010288号</a>
-
-<a href="https://hopedomain.com/zh/age/474029.xyz" target="_blank">
-  <img src="https://hopedomain.com/api/badge/domain-age/474029.xyz?theme=orange&lang=zh" alt="域名年龄" />
-</a><br>
-<!-- SSL认证代码 Start -->
-<a href="https://www.ssljx.cn/474029.xyz" target="_blank">
-    <img src="https://www.ssljx.cn/static/image/sslr.png" style="height: 35px">
-</a>
-<!-- SSL认证代码 End -->
-</div>
+        <!-- 域名年龄 + SSL认证 同一行 -->
+        <div class="row-inline">
+            <span class="inline-item">
+                <a href="https://hopedomain.com/zh/age/474029.xyz" target="_blank">
+                    <img src="https://hopedomain.com/api/badge/domain-age/474029.xyz?theme=orange&lang=zh" alt="域名年龄">
+                </a>
+            </span>
+            <span class="inline-item">
+                <a href="https://www.ssljx.cn/474029.xyz" target="_blank">
+                    <img src="https://www.ssljx.cn/static/image/sslr.png" alt="SSL认证" style="height:35px;">
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
