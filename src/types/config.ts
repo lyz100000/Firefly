@@ -60,3 +60,4 @@ export type WidgetComponentType =
   | "profile"
   // ... 其他已有类型
   | "timeGreeting";
+  | "WeatherSidebar";

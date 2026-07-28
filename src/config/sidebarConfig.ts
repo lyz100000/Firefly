@@ -127,6 +127,12 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,   // 是否在文章详情页显示
 		},
 		{
+			type: "WeatherSidebar",
+			enable: true,
+			position: "top",
+			showOnPostPage: false,
+		},
+		{
 			// 组件类型：站点统计组件
 			type: "stats",
 			// 是否启用该组件
