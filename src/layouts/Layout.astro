@@ -28,6 +28,8 @@ import type { Favicon } from "@/types/config";
 import { isHomePage } from "@/utils/layout-utils";
 import { url } from "@/utils/url-utils";
 
+import { Font } from "astro:assets";
+
 import "@/styles/main.css";
 import "@/styles/variables.styl";
 import "@/styles/markdown-extend.styl";
@@ -118,7 +120,6 @@ const siteLang = lang.replace("_", "-");
             screenRecord={analyticsConfig.la51Analytics?.screenRecord}
             />
     )}
-
     <title>{pageTitle}</title>
     <meta
       name="description"
@@ -553,6 +554,9 @@ const siteLang = lang.replace("_", "-");
 
     <!-- Font Setup (Astro Font API) -->
     <FontSetup />
+
+    <Font cssVariable="--font-myfont" />
+
   </head>
   <body
     class="min-h-screen"

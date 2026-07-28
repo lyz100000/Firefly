@@ -1,3 +1,4 @@
+import { defineConfig, fontProviders } from "astro/config";
 import { setMaxListeners } from "node:events";
 import cloudflare from "@astrojs/cloudflare";
 import { unified } from "@astrojs/markdown-remark";
@@ -67,6 +68,8 @@ export default defineConfig({
 
 	base: "/",
 	trailingSlash: "always",
+
+
 
 	// 字体配置 - 只加载实际使用的字体，跳过未引用的以加快构建
 	fonts: (() => {
@@ -362,4 +365,18 @@ export default defineConfig({
 			assetsInlineLimit: 4096,
 		},
 	},
+
+  fonts: [{
+    provider: fontProviders.local(),
+    name: "MyFont",
+    cssVariable: "--font-myfont",
+    options: {
+      variants: [{
+        src: ['./src/assets/fonts/LXGWWenKai-Medium.subset.woff2'],
+        weight: 'normal',
+        style: 'normal'
+      }]
+    }
+  }]
+
 });
