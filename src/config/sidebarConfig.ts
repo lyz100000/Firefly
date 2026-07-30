@@ -59,6 +59,12 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
+			type: "schedule",
+			enable: true,
+			position: "sticky",
+			showOnPostPage: false,
+		},
+		{
 			// 组件类型：音乐播放器
 			type: "music",
 			// 是否启用该组件
