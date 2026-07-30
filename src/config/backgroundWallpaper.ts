@@ -65,11 +65,12 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否启用主页横幅文字
 			enable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "逸树の小屋",
 			// 主页横幅主标题字体大小
 			titleSize: "4.5rem",
 			// 主页横幅副标题
 			subtitle: [
+				"Welcome to my blog!",
 				"In Reddened Chrysalis, I Once Rest",
 				"From Shattered Sky, I Free Fall",
 				"Amidst Silenced Stars, I Deep Sleep",
