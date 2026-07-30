@@ -377,6 +377,24 @@ export default defineConfig({
         style: 'normal'
       }]
     }
-  }]
-
+  },
+	{
+	provider : fontProviders.fontsource(),
+		name: "JetBrains Mono",
+		cssVariable: "--font-jetbrains-mono",
+		weights: ["400", "700"],
+		styles: ["normal"],
+		subsets: ["latin", "cyrillic"],
+		fallbacks: [
+			"ui-monospace",
+			"SFMono-Regular",
+			"Menlo",
+			"Monaco",
+			"Consolas",
+			"Liberation Mono",
+			"Courier New",
+			"monospace",
+		],
+},
+]
 });
