@@ -790,7 +790,7 @@ export type WidgetComponentType =
 ```
 // src/config/sidebarConfig.ts
 {
-  type: "weather",
+  type: "WeatherSidebar",
   enable: true,
   position: "top",
   showOnPostPage: false,
