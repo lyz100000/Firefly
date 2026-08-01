@@ -55,6 +55,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		children: [
 			// 动态
 			LinkPresets.Dynamic,
+			LinkPresets.Anime,
 		],
 	});
 
