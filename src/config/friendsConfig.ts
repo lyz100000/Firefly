@@ -23,13 +23,23 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
+		title: "云墨观窗",
+		imgurl:
+			"https://mojue88.com/favicon.png",
+		desc: "静坐窗前以文字记录日常与所思",
+		siteurl: "https://mojue88.com/",
+		tags: ["Blog"],
+		weight: 11, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
+	{
 		title: "夏夜流萤",
 		imgurl:
 			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
 		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
 		siteurl: "https://blog.cuteleaf.cn",
 		tags: ["Blog"],
-		weight: 10, // 权重，数字越大排序越靠前
+		weight: 9, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{
@@ -39,7 +49,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "躬身入局，心为主理，行有尺度，自持本心.",
 		siteurl: "https://fqzlr.com/",
 		tags: ["Blog"],
-		weight: 9, // 权重，数字越大排序越靠前
+		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
 	{

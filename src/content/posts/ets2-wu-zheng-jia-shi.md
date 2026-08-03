@@ -4,7 +4,7 @@ title: 这么多人无证驾驶吗（
 published: 2026-08-03 18:08:00
 description: 欧洲卡车模拟2
 image: ./images/ets_1.jpg
-category: 日常, 游戏
+category: 游戏
 draft: false
 ---
 
