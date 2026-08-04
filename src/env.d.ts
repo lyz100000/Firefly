@@ -4,6 +4,7 @@
 declare global {
 	interface ImportMetaEnv {
 		readonly MEILI_MASTER_KEY: string;
+		readonly PUBLIC_IMG_UPLOAD_TOKEN: string; // ← 新增
 	}
 
 	interface ITOCManager {
