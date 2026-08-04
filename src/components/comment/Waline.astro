@@ -14,50 +14,12 @@ const config = {
 	...(commentConfig.waline?.visitorCount ? { pageview: true } : {}),
 };
 
-const imageUploadURL = commentConfig.waline?.imageUploadURL || "";
-const imageUploadToken = commentConfig.waline?.imageUploadToken || "";
-
-// ========== 在这里添加图床上传代码 ==========
-function getUploadFolder() {
-	const now = new Date();
-	const year = now.getFullYear();
-	const month = String(now.getMonth() + 1).padStart(2, "0");
-	const day = String(now.getDate()).padStart(2, "0");
-	return `comments/${year}/${month}/${day}`;
-}
-
-if (imageUploadURL && imageUploadToken) {
-  config.imageUploader = (file) => {
-    var folder = getUploadFolder();
-    var uploadURL = imageUploadURL + '?uploadFolder=' + encodeURIComponent(folder);
-
-    var formData = new FormData();
-    formData.append('file', file);
-    return fetch(uploadURL, {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + imageUploadToken,
-        'Accept': 'application/json',
-      },
-      body: formData,
-    })
-      .then((resp) => {
-        if (!resp.ok) throw new Error('图片上传失败: ' + resp.status);
-        return resp.json();
-      })
-      .then((data) => {
-        // 解析响应，拿到图片 URL（下面细说）
-        return url;
-      });
-  };
-}
-// ========== 图床上传代码结束 ==========
 ---
 <!-- Waline -->
 <div class="relative w-full">
   <div id="waline"></div>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
-  <script type="module" is:inline define:vars={{ config, imageUploadURL, imageUploadToken }}>
+  <script type="module" is:inline define:vars={{ config }}>
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     const requestedPath = new URLSearchParams(window.location.search).get("path");
     const effectiveConfig = requestedPath

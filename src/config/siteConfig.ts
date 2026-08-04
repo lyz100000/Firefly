@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"逸树的个人博客",
+		"逸树的个人博客，分享日常生活。",
 
 	// 站点关键词
 	keywords: [
@@ -72,7 +72,7 @@ export const siteConfig: SiteConfig = {
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
 			type: "image",
-			value: "assets/images/firefly.png",
+			value: "assets/images/logo.png",
 			alt: "🍀",
 		},
 		// 导航栏标题

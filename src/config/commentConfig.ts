@@ -39,11 +39,6 @@ export const commentConfig: CommentConfig = {
 		login: "enable",
 		// 是否启用文章访问量统计功能
 		visitorCount: true,
-		// ===== 评论图片上传（图床接入） =====
-		// 图床上传地址（/upload 端点）
-		imageUploadURL: "https://imgbed.474029.xyz/upload",
-		// 图床 API Token —— 不要硬编码！走环境变量
-		imageUploadToken: import.meta.env?.PUBLIC_IMG_UPLOAD_TOKEN || "",
 	},
 
 	// artalk评论系统配置
