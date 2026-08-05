@@ -29,8 +29,8 @@ export const friendsConfig: FriendLink[] = [
 		desc: "静坐窗前以文字记录日常与所思",
 		siteurl: "https://mojue88.com/",
 		tags: ["Blog"],
-		weight: 11, // 权重，数字越大排序越靠前
-		enabled: true, // 是否启用
+		weight: 11,
+		enabled: true,
 	},
 	{
 		title: "夏夜流萤",
@@ -39,8 +39,8 @@ export const friendsConfig: FriendLink[] = [
 		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
 		siteurl: "https://blog.cuteleaf.cn",
 		tags: ["Blog"],
-		weight: 9, // 权重，数字越大排序越靠前
-		enabled: true, // 是否启用
+		weight: 9, //
+		enabled: true,
 	},
 	{
 		title: "fqzlr",
@@ -49,8 +49,18 @@ export const friendsConfig: FriendLink[] = [
 		desc: "躬身入局，心为主理，行有尺度，自持本心.",
 		siteurl: "https://fqzlr.com/",
 		tags: ["Blog"],
-		weight: 10, // 权重，数字越大排序越靠前
-		enabled: true, // 是否启用
+		weight: 10,
+		enabled: true,
+	},
+	{
+		title: "博客录",
+		imgurl:
+			"https://boke.lu/logo.png",
+		desc: "boke.lu · 博客收录展示平台~",
+		siteurl: "https://boke.lu",
+		tags: ["Blog"],
+		weight: 8,
+		enabled: true,
 	},
 	{
 		title: "Firefly Docs",
@@ -58,7 +68,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "Firefly主题模板文档",
 		siteurl: "https://docs-firefly.cuteleaf.cn",
 		tags: ["Docs"],
-		weight: 8,
+		weight: 2,
 		enabled: true,
 	},
 	{
@@ -67,7 +77,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
 		siteurl: "https://github.com/withastro/astro",
 		tags: ["Framework"],
-		weight: 7,
+		weight: 1,
 		enabled: true,
 	},
 ];
