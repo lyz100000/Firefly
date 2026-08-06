@@ -14,19 +14,98 @@ const config = {
 	...(commentConfig.waline?.visitorCount ? { pageview: true } : {}),
 };
 
+const API_TOKEN = import.meta.env.WALINE_IMAGE_API_TOKEN || '';
+const API_URL = import.meta.env.WALINE_IMAGE_API_URL || '';
+// ⭐ 添加图片服务器的域名
+const IMAGE_BASE_URL = import.meta.env.IMAGE_BASE_URL || 'https://imgbed.474029.xyz';
+
 ---
 <!-- Waline -->
 <div class="relative w-full">
   <div id="waline"></div>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
-  <script type="module" is:inline define:vars={{ config }}>
+  
+  <script type="module" is:inline define:vars={{ config, API_TOKEN, API_URL, IMAGE_BASE_URL }}>
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
     const requestedPath = new URLSearchParams(window.location.search).get("path");
     const effectiveConfig = requestedPath
       ? { ...config, path: requestedPath }
       : config;
+    
+    const imageUploader = (file) => {
+      console.log('[Waline] 开始上传文件:', file.name);
+      
+      if (!API_URL || API_URL === '') {
+        console.warn('[Waline] 未配置自定义图片上传 API，使用默认上传');
+        return undefined;
+      }
+      
+      const formData = new FormData();
+      const headers = new Headers();
+      
+      formData.append('file', file);
+      
+      if (API_TOKEN && API_TOKEN !== '') {
+        headers.append('Authorization', `Bearer ${API_TOKEN}`);
+      }
+      
+      headers.append('Accept', 'application/json');
+      
+      return fetch(API_URL, {
+        method: 'POST',
+        headers: headers,
+        body: formData,
+      })
+        .then((resp) => {
+          if (!resp.ok) {
+            throw new Error(`上传失败: ${resp.status} ${resp.statusText}`);
+          }
+          return resp.json();
+        })
+        .then((resp) => {
+          console.log('[Waline] API 响应:', resp);
+          
+          // ⭐ 根据您的 API 响应格式解析
+          // 响应格式: [{"src":"/file/1786003910245_下载.png"}]
+          let imageUrl = null;
+          
+          if (Array.isArray(resp) && resp.length > 0 && resp[0].src) {
+            // 获取相对路径
+            const relativePath = resp[0].src;
+            console.log('[Waline] 获取到相对路径:', relativePath);
+            
+            // ⭐ 补全完整 URL
+            if (relativePath.startsWith('http')) {
+              // 如果已经是完整 URL，直接使用
+              imageUrl = relativePath;
+            } else {
+              // 拼接基础域名
+              imageUrl = IMAGE_BASE_URL + relativePath;
+            }
+            
+            console.log('[Waline] 完整图片 URL:', imageUrl);
+            return imageUrl;
+          }
+          
+          // 如果格式不匹配，抛出错误
+          console.error('[Waline] 未预期的响应格式:', resp);
+          throw new Error('API 响应格式不正确');
+        })
+        .catch((error) => {
+          console.error('[Waline] 图片上传失败:', error);
+          return '';
+        });
+    };
+    
+    const finalConfig = {
+      ...effectiveConfig,
+      imageUploader: imageUploader,
+    };
+    
     try {
-      init(effectiveConfig);
+      init(finalConfig);
+      console.log('[Waline] 初始化成功，已启用自定义图片上传');
     } catch (error) {
       console.error("[Waline] Failed to initialize:", error);
     }
