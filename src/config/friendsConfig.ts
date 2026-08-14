@@ -72,6 +72,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: 8,
 		enabled: true,
 	},
+		{
+		title: "笔墨迹",
+		imgurl:
+			"https://photo.xiangming.site/img/blogscn_icon.png",
+		desc: "笔墨迹",
+		siteurl: "https://blogscn.fun/",
+		tags: ["Blog"],
+		weight: 7,
+		enabled: true,
+	},
 	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
