@@ -28,12 +28,12 @@ export const commentConfig: CommentConfig = {
 		lang: "zh-CN",
 		// 设置 Waline 评论系统表情地址
 		emoji: [
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/weibo",
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/bilibili",
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/bmoji",
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/qq",
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/coolapk",
-			"https://cdn.jsdelivr.net/npm/@waline/emojis@1.4.0/tieba",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/weibo",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/bilibili",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/bmoji",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/qq",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/coolapk",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/tieba",
 		],
 		// 评论登录模式。可选值如下：
 		//   'enable'   —— 默认，允许访客匿名评论和用第三方 OAuth 登录评论，兼容性最佳。
