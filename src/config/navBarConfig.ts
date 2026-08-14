@@ -81,10 +81,10 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/lyz100000",
+				name: "Travelling",
+				url: "https://www.travellings.cn/go.html",
 				external: true,
-				icon: "fa7-brands:github",
+				icon: "material-symbols:train",
 			},
 		],
 	});
