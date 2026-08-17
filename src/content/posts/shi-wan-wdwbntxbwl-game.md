@@ -1,7 +1,7 @@
 ---
 tags: [日常, 游戏]
 title: 试玩神人游戏《完蛋！我被男同学包围了》
-published: 2026-08-08 16:41:00
+published: 2026-08-08 16:41:00+8:00
 description: 《完蛋！我被男同学包围了》
 image: ./images/nantongxuegame/20260808144841_1.jpg
 category: 游戏

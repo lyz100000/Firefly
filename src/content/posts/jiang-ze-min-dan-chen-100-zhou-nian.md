@@ -1,7 +1,7 @@
 ---
 tags: [社会]
 title: 跨越世纪的回响：纪念江泽民同志诞辰100周年
-published: 2026-08-11 22:50:00
+published: 2026-08-11 22:50:00+8:00
 description: 纪念江泽民同志诞辰100周年
 image: ./images/jiangzemin.jpg
 category: 社会

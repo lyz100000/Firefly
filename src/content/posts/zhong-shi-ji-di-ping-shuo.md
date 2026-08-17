@@ -1,7 +1,7 @@
 ---
 tags: [日常, 科学]
 title: 中世纪并不“愚昧”：古希腊人早已算出地球周长
-published: 2026-08-04 15:22:00
+published: 2026-08-04 15:22:00+8:00
 description: 历史谣言
 image: ./images/dps.jpg
 category: 科学

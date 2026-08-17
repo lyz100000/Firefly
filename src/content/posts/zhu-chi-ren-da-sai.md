@@ -1,7 +1,7 @@
 ---
 tags: [日常, 社会]
 title: 看了《主持人大赛（新闻主播季）》的一些小感想
-published: 2026-08-14 16:24:00
+published: 2026-08-14 16:24:00+8:00
 description: 《主持人大赛（新闻主播季）》
 image: ./images/zhuchirendasai.jpg
 category: 日常
