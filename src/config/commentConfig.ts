@@ -28,11 +28,11 @@ export const commentConfig: CommentConfig = {
 		lang: "zh-CN",
 		// 设置 Waline 评论系统表情地址
 		emoji: [
-			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/weibo",
 			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/bilibili",
 			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/bmoji",
 			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/qq",
 			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/coolapk",
+			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/weibo",
 			"https://cdn.jsdmirror.cn/npm/@waline/emojis@1.4.0/tieba",
 		],
 		// 评论登录模式。可选值如下：

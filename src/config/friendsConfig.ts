@@ -23,6 +23,16 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
+		title: "Lin Blog",
+		imgurl:
+			"https://linlog.top/api/uploads/2026/09/1788411216332767920-dca59196a965c5e8.jpg",
+		desc: "记录技术、互联网与日常观察",
+		siteurl: "https://linlog.top/",
+		tags: ["Blog"],
+		weight: 13,
+		enabled: true,
+	},
+	{
 		title: "云墨观窗",
 		imgurl:
 			"https://mojue88.com/favicon.png",
